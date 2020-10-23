@@ -1,0 +1,207 @@
+/*css reset*/
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+	font: inherit;
+}
+
+
+  
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+  
+body, h1, h2, h3, h4, h5, h6, p, ol, ul{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+  
+ol, ul{
+    list-style: none;
+}
+  
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Main */
+
+/* Container */
+.container{
+    display: flex;
+}
+
+.grid{
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 84vh;
+    grid-auto-rows: 30vh;
+    grid-gap: 2px;
+}
+ 
+
+.main{
+    background: hsl(199, 50%, 50%) url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg) no-repeat bottom;
+    background-size: cover;
+    background-size: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main a{
+    color: white;
+    text-decoration: none;
+}
+
+.section-nav{
+    height: 2rem;
+    width: 70%;
+    margin-bottom: 2rem;
+    display:grid;
+    grid-template-columns: repeat(8,2fr) 3fr;
+    grid-column-gap: 1px;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid hsl(0,0%,35%);
+    background-color: hsl(0,0%,35%);
+}
+.section-nav > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,hsl(0,0%,45%) 40%,hsl(0,0%,35%) 50%,hsl(0,0%,45%) 100%);
+}
+.section-nav span:hover{
+    background: linear-gradient(180deg,hsl(0,0%,35%) 40%,hsl(0,0%,25%) 50%,hsl(0,0%,35%) 100%);
+    cursor: pointer;
+}
+.gradient:last-child{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.gradient:first-child{
+    background: linear-gradient(180deg,hsl(0,0%,45%) 40%,hsl(0,0%,35%) 50%,hsl(0,0%,45%) 100%);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gradient img{
+    height: 20px;
+}
+
+.nav-search{
+    position: relative;
+}
+.search-box{
+    color: white;
+    width: 8rem;
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 2px 7px 2px 1.5rem;
+    transition: all 0.2s;
+}
+.search-box:focus{
+    color: black;
+    padding: 2px 8px;
+    margin: 0 0.5rem;
+    width: 12rem;
+    background: white;
+    outline: none;
+    z-index: 1;
+}
+.search-icon{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 1rem;
+    background: transparent url(assets/search-icon.png) no-repeat center;
+    background-size: 12px;
+}
+
+.img-title{
+    height: 6rem;
+    width: 70%;
+    background:transparent url(assets/title.png) no-repeat center;
+    background-position-y: 5px;
+}
+.img-text{
+    height: 6rem;
+    width: 70%;
+    background: transparent url(assets/text.png) no-repeat center;
+}
+.img-explore{
+    margin: 2rem;
+    height: 2rem;
+    width: 50%;
+    background: transparent url(assets/explore.png) no-repeat top;
+}
+.img-explore:hover{
+    background: transparent url(assets/explore.png) no-repeat bottom;
+}
+
+.sub-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2px
+}
+.sub-section-1{
+    background: white url(https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_iphone5s.jpg) no-repeat top;
+    background-size: cover;
+}
+.sub-section-2{
+    background: white url(https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_iphone5c.jpg) no-repeat top;
+    background-size: cover;
+}
+.sub-section-3{
+    background: white url(https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_30_years.jpg) no-repeat top;
+    background-size: cover;
+}
+.sub-section-4{
+    background: white url(https://web.archive.org/web/20140301004610im_/http://images.apple.com/home/images/promo_supplier_responsibility.jpg) no-repeat top;
+    background-size: cover;
+}
+
+/* footer */
+footer{
+    font-size: 12px;
+    max-width: 65rem;
+    opacity: 0.7;
+    margin: 1rem auto 3rem auto;
+}
+.nav-grid{
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+}
+.nav-links{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-links li{
+    padding: 0 0.25rem;
+    position: relative;
+    border-right: 1px solid hsl(180, 4%, 20%);
+}
+.nav-links li:last-child{
+    border-right: none;
+}
+.nav-links .flag{
+    height: 12px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #08c;
+}
+footer a:hover{
+    text-decoration: underline;
+}
